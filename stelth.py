@@ -8,9 +8,9 @@ def start_message(message):
 @bot.message_handler(content_types=["text"])
 def get_photo(message):
     if message.text.lower() == "photo":
-        img = Image.open("stelth.jpg")
-        crop = img.crop((100,20,400,200))
-        crop.show()
+        # img = Image.open("stelth.jpg")
+        # crop = img.crop((0,500,0,100))
+        # crop.show()
         bot.send_photo(message.chat.id,open("stelth.jpg",'rb'))
 
 bot.polling()
